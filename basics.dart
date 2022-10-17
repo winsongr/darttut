@@ -1,14 +1,14 @@
 import 'dart:io';
 
 void main() {
-  intToStr("555");
+  // intToStr("555");
   // white("  j  jj       m ");
   // sq(5);
   // swap();
   // divider(divider: 7, divident: 22);
   // printString();
   // print(mulDouble(num1: 5.5, num2: 6.6));
-  // printNUm();
+  printNUm();
   // name();
   // conVal();
   // print(simpleInterest(principal: 5000, tenure: 12, annInterest: 8));
@@ -63,11 +63,16 @@ printString() {
 
 printNUm() {
   var num = stdin.readLineSync();
-  if (num != null) {
-    int myNum = int.parse(num);
-    if (myNum > 0) {
-      print(myNum);
+  try {
+    if (num != null) {
+      int myNum = int.parse(num);
+      if (myNum > 0) {
+        print(myNum);
+      }
     }
+  }
+   catch (e) {
+    print(e.toString()+'1');
   }
 }
 
